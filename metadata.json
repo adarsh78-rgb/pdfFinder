@@ -1,0 +1,8 @@
+
+{
+  "name": "PDF Finder",
+  "description": "Minimalist hybrid PDF search engine for students. Free sources first, AI as fallback.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
