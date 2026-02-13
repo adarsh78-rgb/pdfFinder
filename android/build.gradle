@@ -17,10 +17,21 @@ buildscript {
 
 apply from: "variables.gradle"
 
+ext {
+    kotlinStdlibVersion = '1.8.22'
+}
+
 allprojects {
     repositories {
         google()
         mavenCentral()
+    }
+    configurations.configureEach {
+        resolutionStrategy {
+            force "org.jetbrains.kotlin:kotlin-stdlib:${rootProject.ext.kotlinStdlibVersion}"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.ext.kotlinStdlibVersion}"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${rootProject.ext.kotlinStdlibVersion}"
+        }
     }
 }
 
