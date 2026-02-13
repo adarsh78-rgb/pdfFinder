@@ -6,13 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cap:sync": "npx cap sync android",
+    "apk:debug": "npm run build && npx cap sync android && cd android && ./gradlew --no-daemon assembleDebug"
   },
   "dependencies": {
-    "lucide-react": "^0.564.0",
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/cli": "^7.5.0",
+    "@capacitor/core": "^8.1.0",
     "@google/genai": "^1.41.0",
-    "react-dom": "^19.2.4",
-    "react": "^19.2.4"
+    "lucide-react": "^0.564.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
